@@ -27,8 +27,8 @@ El retorno dichos métodos será un array, el cual tiene los las siguientes posi
 ```Array
     [
         "type" (string) => "DNI" | "NIE" | "CIF",
-        "value" => (string) => El valor introducido,
-        "result" => (bool) => Si la validación ha sido satisfactoria devolvera true
+        "value" (string) => El valor introducido,
+        "result" (bool) => Si la validación ha sido satisfactoria devolvera true
     ]
 ```
 
