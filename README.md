@@ -1,4 +1,4 @@
-# Validación de Documentos y IBAN
+# IDAccountValidator
 
 Esta librería permite validar diferentes tipos de documentos como DNI, NIE, CIF y también validar el IBAN, todo ello en base a sus algoritmos.
 Es una herramienta útil para asegurarse de que los datos ingresados sean correctos y válidos.
