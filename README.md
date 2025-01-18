@@ -5,7 +5,7 @@ Es una herramienta útil para asegurarse de que los datos ingresados sean correc
 
 Para instalarlo hay que ejecutar el siguiente comando mediante el gestor de paquetes de composer:
 
-`composer require evarmi/id-account`
+`composer require evarmi/id-account-validator`
 
 ## Características Principales
 
