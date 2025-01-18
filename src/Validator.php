@@ -56,7 +56,6 @@ class Validator
         $numeros = substr($nie, 1, 7);
         $letra = substr($nie, -1);
 
-        // Sustituir la letra inicial por su correspondiente número
         switch ($primeraLetra) {
             case 'X':
                 $numeros = '0' . $numeros;
