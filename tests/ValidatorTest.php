@@ -20,6 +20,7 @@ class ValidatorTest extends TestCase
         $validator = Validator::documentValidation('X8222827M');
 
         $this->assertEquals('NIE', $validator['type']);
+        $this->assertEquals('X8222827M', $validator['value']);
         $this->assertTrue($validator['validation']);
     }
 

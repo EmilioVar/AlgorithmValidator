@@ -31,9 +31,21 @@ class Validator
         $letra = substr($dni, -1);
         $letrasValidas = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
+        if ($type === 'NIE') {
+            $numbersToLetter = [
+                '0' => 'X',
+                '1' => 'Y',
+                '2' => 'Z',
+            ];
+            
+            $value = $numbersToLetter[substr($numeros, 0, 1)] . substr($numeros, 1) . substr($dni, -1);
+        } else {
+            $value = $dni;
+        }
+
         return [
             'type' => $type == 'NIE' ? 'NIE' : 'DNI',
-            'value' => $dni,
+            'value' => $value,
             'validation' => $letra === $letrasValidas[$numeros % 23],
         ];
     }
