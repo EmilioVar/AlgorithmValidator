@@ -1,0 +1,21 @@
+{
+    "name": "evarmi/id-account-validator",
+    "description": "validador de varios tipos de documentos, como los de identidad o iban",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Evarmi\\IdAccountValidator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emilio Vargas Millan",
+            "email": "emiliovm@outlook.es"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
