@@ -16,7 +16,7 @@ Para su funcionamiento, basta con llamar a la clase Validator utilizando el sigu
 
 `use Evarmi\IdAccountValidator\Validator;`
 
-Tenemos ***2 métodos disponibles*** Para validación:
+Tenemos ***2 métodos disponibles*** Para las validaciones:
 
 - *documentValidation()*: será el encargado de validar un número de documento, ya sea dni, nie o cif.
 ***El reconocimiento del tipo de documento lo hace automáticamente***.
