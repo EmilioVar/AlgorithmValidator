@@ -21,7 +21,7 @@ class Validator
 
         return [
             'type' => 'unknown',
-            'value' => false,
+            'result' => false,
         ];
     }
 
@@ -37,7 +37,7 @@ class Validator
                 '1' => 'Y',
                 '2' => 'Z',
             ];
-            
+
             $value = $numbersToLetter[substr($numeros, 0, 1)] . substr($numeros, 1) . substr($dni, -1);
         } else {
             $value = $dni;
@@ -46,7 +46,7 @@ class Validator
         return [
             'type' => $type == 'NIE' ? 'NIE' : 'DNI',
             'value' => $value,
-            'validation' => $letra === $letrasValidas[$numeros % 23],
+            'result' => $letra === $letrasValidas[$numeros % 23],
         ];
     }
 
@@ -105,15 +105,48 @@ class Validator
             return [
                 'type' => 'CIF',
                 'value' => $cif,
-                'validation' => $control === $letrasValidas[$digitoControlCalculado],
+                'result' => $control === $letrasValidas[$digitoControlCalculado],
             ];
         } else {
             // Control por número
             return [
                 'type' => 'CIF',
                 'value' => $cif,
-                'validation' => (int) $control === $digitoControlCalculado,
+                'result' => (int) $control === $digitoControlCalculado,
             ];
         }
+    }
+
+    /**
+     * IBAN VALIDATE
+     */
+
+    public static function ibanValidation($iban)
+    {
+        $iban = strtoupper(str_replace(' ', '', $iban));
+
+        if (strlen($iban) < 15 || strlen($iban) > 34) {
+            return false;
+        }
+
+        $ibanReorganizado = substr($iban, 4) . substr($iban, 0, 4);
+
+        $ibanNumerico = '';
+        for ($i = 0; $i < strlen($ibanReorganizado); $i++) {
+            $char = $ibanReorganizado[$i];
+            if (ctype_alpha($char)) {
+                // Convertir la letra en número
+                $ibanNumerico .= ord($char) - 55;
+            } else {
+                // Mantener los dígitos
+                $ibanNumerico .= $char;
+            }
+        }
+
+        return [
+            'type' => 'IBAN',
+            'value' => $iban,
+            'result' => bcmod($ibanNumerico, '97') == 1,
+        ];
     }
 }
