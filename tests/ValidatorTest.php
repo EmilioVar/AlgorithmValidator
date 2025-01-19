@@ -1,8 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
-use Evarmi\IdAccountValidator\Validator;
+use Evarmi\AlgorithmValidator\Validator;
 
 class ValidatorTest extends TestCase
 {

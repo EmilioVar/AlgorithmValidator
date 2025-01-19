@@ -1,11 +1,11 @@
 {
-    "name": "evarmi/id-account-validator",
+    "name": "evarmi/algorithm-validator",
     "description": "validador de varios tipos de documentos, como los de identidad o iban",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Evarmi\\IdAccountValidator\\": "src/"
+            "Evarmi\\AlgorithmValidator\\": "src/"
         }
     },
     "authors": [

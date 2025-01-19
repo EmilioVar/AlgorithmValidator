@@ -1,6 +1,6 @@
 <?php
 
-namespace Evarmi\IdAccountValidator;
+namespace Evarmi\AlgorithmValidator;
 
 class Validator
 {
