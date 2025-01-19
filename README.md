@@ -7,12 +7,14 @@ Para instalarlo hay que ejecutar el siguiente comando mediante el gestor de paqu
 
 `composer require evarmi/algorithm-validator`
 
-## Características Principales
+## Funcionalidades
 
-- Validación de DNI (Documento Nacional de Identidad)
-- Validación de NIE (Número de Identificación de Extranjero)
-- Validación de CIF (Código de Identificación Fiscal)
-- Validación de IBAN (International Bank Account Number)
+- [Validación de documentos](#validación-de-documentos)
+    - Validación de DNI (Documento Nacional de Identidad)
+    - Validación de NIE (Número de Identificación de Extranjero)
+    - Validación de CIF (Código de Identificación Fiscal)
+- [Validación de datos bancarios](#validación-de-datos-bancarios)
+    - Validación de IBAN (International Bank Account Number)
 
 ## Forma de uso
 
@@ -37,6 +39,8 @@ El retorno dichos métodos será un array, el cual tiene los las siguientes posi
 ```
 
 ## Ejemplos de Uso
+
+### Validación de documentos
 
 ```php
     ### Validación de DNI:
@@ -78,8 +82,12 @@ El retorno dichos métodos será un array, el cual tiene los las siguientes posi
      * ]
      **/
 
-    ### Validación de IBAN
+```
 
+### Validación de datos bancarios
+
+```PHP
+    ### Validación de IBAN
     $validacionIBAN = Validator::ibanValidation('ES7921000813610123456789');
 
     var_dump($validacionIBAN);
