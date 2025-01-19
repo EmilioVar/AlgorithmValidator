@@ -1,11 +1,11 @@
-# IDAccountValidator
+# AlgorithmValidator
 
 Esta librería permite validar diferentes tipos de documentos como DNI, NIE, CIF y también validar el IBAN, todo ello en base a sus algoritmos.
 Es una herramienta útil para asegurarse de que los datos ingresados sean correctos y válidos.
 
 Para instalarlo hay que ejecutar el siguiente comando mediante el gestor de paquetes de composer:
 
-`composer require evarmi/id-account-validator`
+`composer require evarmi/algorithm-validator`
 
 ## Características Principales
 
@@ -18,7 +18,7 @@ Para instalarlo hay que ejecutar el siguiente comando mediante el gestor de paqu
 
 Para su funcionamiento, basta con llamar a la clase Validator utilizando el siguiente namespace en el lugar donde lo vayamos a utilizar:
 
-`use Evarmi\IdAccountValidator\Validator;`
+`use Evarmi\AlgorithmValidator\Validator;`
 
 Tenemos ***2 métodos disponibles*** Para las validaciones:
 
