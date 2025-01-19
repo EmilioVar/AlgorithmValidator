@@ -1,4 +1,10 @@
 # AlgorithmValidator
+![Packagist Version](https://img.shields.io/packagist/v/evarmi/algorithm-validator)
+![GitHub last commit](https://img.shields.io/github/last-commit/EmilioVar/AlgorithmValidator)
+![AlgorithmValidator](./images/header.png)
+
+
+
 
 Esta librería permite validar diferentes tipos de documentos como DNI, NIE, CIF y también validar el IBAN, todo ello en base a sus algoritmos.
 Es una herramienta útil para asegurarse de que los datos ingresados sean correctos y válidos.
