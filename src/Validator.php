@@ -22,6 +22,7 @@ class Validator
         return [
             'type' => 'unknown',
             'result' => false,
+            'value' => 'unknown',
         ];
     }
 
