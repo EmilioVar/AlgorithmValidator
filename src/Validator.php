@@ -126,7 +126,11 @@ class Validator
         $iban = strtoupper(str_replace(' ', '', $iban));
 
         if (strlen($iban) < 15 || strlen($iban) > 34) {
-            return false;
+            return [
+                'type' => 'IBAN',
+                'value' => $iban,
+                'result' => false,
+            ];
         }
 
         $ibanReorganizado = substr($iban, 4) . substr($iban, 0, 4);

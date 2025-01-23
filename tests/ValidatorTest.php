@@ -63,6 +63,12 @@ class ValidatorTest extends TestCase
         $this->assertEquals('IBAN', $validatorFalse['type']);
         $this->assertEquals('GB94BARC20201530093459', $validatorFalse['value']);
         $this->assertFalse($validatorFalse['result']);
+
+        $validatorFalseTwo = Validator::ibanValidation('GB94BARC20201530093459ASDFASDF');
+        
+        $this->assertEquals('IBAN', $validatorFalseTwo['type']);
+        $this->assertEquals('GB94BARC20201530093459ASDFASDF', $validatorFalseTwo['value']);
+        $this->assertFalse($validatorFalseTwo['result']);
     }
 
     public function testInvalidFormatDocument() {
