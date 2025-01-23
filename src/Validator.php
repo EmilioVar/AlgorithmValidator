@@ -21,8 +21,8 @@ class Validator
 
         return [
             'type' => 'unknown',
+            'value' => $document,
             'result' => false,
-            'value' => 'unknown',
         ];
     }
 
