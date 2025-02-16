@@ -32,7 +32,7 @@ Tenemos ***2 métodos disponibles*** Para las validaciones:
 
 - *documentValidation()*: será el encargado de validar un número de documento, ya sea dni, nie o cif.
 ***El reconocimiento del tipo de documento lo hace automáticamente***.
-- *ibanValidation()*: realizará las validaciones para comprobar si un cif es válido.
+- *ibanValidation()*: realizará las validaciones para comprobar si un iban es válido.
 
 El retorno dichos métodos será un array, el cual tiene los las siguientes posibilidades de retorno:
 
